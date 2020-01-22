@@ -48,6 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         Ваше ФИО: ${surname} ${name} ${patronymic}
         Вам ${age} лет и ${lived} месяцев
         Вы ${adulthood}
-        У вас ${checkChildren} детей`
-    );
+        У вас ${checkChildren} детей
+    `);
 });
