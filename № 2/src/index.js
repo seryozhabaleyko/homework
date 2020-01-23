@@ -34,10 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const year = promptNumber('Введите год рождения:', '1997'); // получает год рождения
     const month = promptNumber('Введите месяц рождения:', '2'); // получает месяц рождения
-
     const gender = confirm('Ваш пол - мужской?'); // получает пол
     const children = promptNumber('Укажите количество детей', 0); // получает количество детей
- 
     const currentMonth = '1'; // текущий месяц
     const currentYear = '2020'; // текуший год
     let age = null; // возраст
