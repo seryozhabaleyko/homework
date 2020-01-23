@@ -20,9 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let age = null; // возраст
     let lived = null; // количество прожитых месяцев
 
-    const checkGender = gender ? 'мужской' : 'женский'; // проверяет пол (true/false)
-    const checkChildren = children !== '0' && children !== null && children !== '' ? children : 'нет'; // проверяет – есть ли дети
-
     /*
      * Если текущий месяц >= месяца рождения, то (let age = текущий год - год рождения) лет и (let lived = текущий месяц - месяц рождения) месяцев
      * Иначе (let возраст = текущий год - 1 - год рождения) лет и (количество месяцев в году(12) - месяц рождения + текущий месяц ) 
@@ -35,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
         lived = 12 - myMonth + Number(month);
     }
 
+    const checkGender = gender ? 'мужской' : 'женский'; // проверяет пол (true/false)
+    const checkChildren = children && children !== '0' ? children : 'нет'; // проверяет – есть ли дети
     const adulthood = age >= 18 ? 'совершеннолетние' : 'несовершеннолетние'; // проверка на совершеннолетние
 
     console.log(`Ваш пол: ${checkGender}`);
