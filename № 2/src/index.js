@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!result) {
                 alert('Вы ничего не ввели!');
             }
-        } while (!result)
+        } while (!result);
 
         return result;
     }
