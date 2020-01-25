@@ -1,5 +1,5 @@
 // получение максимального элемента массива
-const maxWhile = function getMaxValue(arr) {
+const maxTwo = function getMaxValue(arr) {
     let len = arr.length, // получение длины массива
         max = arr[0]; // берем первый элемент из массива, но лучше -Infinity и сравниваем его со всеми остальными элементами массива
 
@@ -28,5 +28,5 @@ const max = function getMaxValue(arr) {
 
 const array = [2, -3, 4, 8, 5, -23, 54, 23, -12, 2, 3, 45, 45, 68, 26, -85, 45, 67];
 
-console.log(maxWhile(array)); // 68
+console.log(maxTwo(array)); // 68
 console.log(max(array)); // 68
