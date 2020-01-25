@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const patronymic = promptString('Введите отчество:', 'Юрьевич'); // получает отчиство
 
     const isNumber = (val) => {
-        return String(parseInt(val, 10)) === val;
+        return String(parseInt(val, 10)) === val; // Number.isNaN(Number(val));
     }
 
     const promptNumber = (message, value) => {
