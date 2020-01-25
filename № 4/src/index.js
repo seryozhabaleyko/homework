@@ -1,5 +1,5 @@
 // получение максимального элемента массива
-const maxWhile = function getMaxValue (arr) {
+const maxWhile = function getMaxValue(arr) {
     let len = arr.length, // получение длины массива
         max = arr[0]; // берем первый элемент из массива, но лучше -Infinity и сравниваем его со всеми остальными элементами массива
 
