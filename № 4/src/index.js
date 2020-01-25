@@ -5,7 +5,7 @@ const maxWhile = function getMaxValue(arr) {
 
     while (len--) {
         if (arr[len] > max) { // если элемент больше, чем в переменной max,
-            max = arr[len]; // то присваиваем его значение переменной
+            max = arr[len]; // то присваиваем его значение переменной max
         }
     }
 
@@ -19,7 +19,7 @@ const max = function getMaxValue(arr) {
 
     for (let i = 1; i < len; i++) {
         if (arr[i] > max) { // если элемент больше, чем в переменной max,
-            max = arr[i]; // то присваиваем его значение переменной
+            max = arr[i]; // то присваиваем его значение переменной max
         }
     }
 
