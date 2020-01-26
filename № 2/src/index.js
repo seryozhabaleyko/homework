@@ -1,10 +1,8 @@
+// promptString :: (String, String) -> String
 const promptString = (message, value) => {
     let result;
     do {
         result = prompt(message, value);
-        if (!result) {
-            alert('Вы ничего не ввели!');
-        }
     } while (!result)
 
     return result;
@@ -19,20 +17,18 @@ const isNumber = (val) => {
     return String(parseInt(val, 10)) === val; // Number.isNaN(Number(val)) || !val;
 }
 
+// promptNumber :: (String, Number) -> Number
 const promptNumber = (message, value) => {
     let result;
     do {
         result = prompt(message, value);
-        if (!isNumber(result)) {
-            alert(`Вы ввели "${result}", а нужно число.`);
-        }
     } while (!isNumber(result));
 
     return Number(result);
 }
 
-const year = promptNumber('Введите год рождения:', '1997'); // получает год рождения
-const month = promptNumber('Введите месяц рождения:', '2'); // получает месяц рождения
+const year = promptNumber('Введите год рождения:', 1997); // получает год рождения
+const month = promptNumber('Введите месяц рождения:', 2); // получает месяц рождения
 const gender = confirm('Ваш пол - мужской?'); // получает пол
 const children = promptNumber('Укажите количество детей', 0); // получает количество детей
 const currentMonth = 1; // текущий месяц
