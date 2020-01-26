@@ -14,8 +14,9 @@ const name = promptString('Введите имя:', 'Сергей'); // полу
 const surname = promptString('Введите фамилию:', 'Гагарин'); // получает фамилию
 const patronymic = promptString('Введите отчество:', 'Юрьевич'); // получает отчиство
 
+// Инкапсулируйте условия
 const isNumber = (val) => {
-    return String(parseInt(val, 10)) === val; // Number.isNaN(Number(val))
+    return String(parseInt(val, 10)) === val; // Number.isNaN(Number(val)) || !val;
 }
 
 const promptNumber = (message, value) => {
