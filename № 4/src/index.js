@@ -13,13 +13,13 @@ const maxTwo = function getMaxValue(arr) {
 };
 
 // получение максимального элемента массива
-const max = function getMaxValue(arr) {
-    let len = arr.length, // получение длины массива
-        max = arr[0]; // берем первый элемент из массива или -Infinity или любое другое значение от которого должени начинатся максимум и сравниваем его со всеми остальными элементами массива
+const max = function getMaxValue(...args) {
+    let len = args.length, // получение длины массива
+        max = args[0]; // берем первый элемент из массива или -Infinity или любое другое значение от которого должени начинатся максимум и сравниваем его со всеми остальными элементами массива
 
     for (let i = 1; i < len; i++) {
-        if (arr[i] > max) { // если элемент больше, чем в переменной max,
-            max = arr[i]; // то присваиваем его значение переменной max
+        if (args[i] > max) { // если элемент больше, чем в переменной max,
+            max = args[i]; // то присваиваем его значение переменной max
         }
     }
 
@@ -29,4 +29,4 @@ const max = function getMaxValue(arr) {
 const array = [2, -3, 4, 8, 5, -23, 54, 23, -12, 2, 3, 45, 45, 68, 26, -85, 45, 67];
 
 console.log(maxTwo(array)); // 68
-console.log(max(array)); // 68
+console.log(max(-23, 2, 23, ...array)); // 68
