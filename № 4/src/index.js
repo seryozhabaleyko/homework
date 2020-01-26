@@ -1,5 +1,6 @@
 // получение максимального элемента массива
-const maxTwo = function getMaxValue(arr) {
+// maxVal :: [Number] -> Number
+const maxVal = (arr) => {
     let len = arr.length, // получение длины массива
         max = arr[0]; // берем первый элемент из массива или -Infinity или любое другое значение от которого должени начинатся максимум и сравниваем его со всеми остальными элементами массива
 
@@ -13,7 +14,8 @@ const maxTwo = function getMaxValue(arr) {
 };
 
 // получение максимального элемента массива
-const max = function getMaxValue(...args) {
+// max :: [Number] -> Number
+const max = (...args) => {
     let len = args.length, // получение длины массива
         max = args[0]; // берем первый элемент из массива или -Infinity или любое другое значение от которого должени начинатся максимум и сравниваем его со всеми остальными элементами массива
 
@@ -28,5 +30,5 @@ const max = function getMaxValue(...args) {
 
 const array = [2, -3, 4, 8, 5, -23, 54, 23, -12, 2, 3, 45, 45, 68, 26, -85, 45, 67];
 
-console.log(maxTwo(array)); // 68
+console.log(maxVal(array)); // 68
 console.log(max(-23, 2, 23, ...array)); // 68
