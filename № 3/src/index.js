@@ -5,7 +5,7 @@ function quadraticEquation(a,b,c) {
 
     if (discriminant > 0) { // квадратное уравнение имеет два разных корня
         x1 = (-b + discriminant**0.5) / (2 * a);
-        x2 = (-b - discriminant**0/5) / (2 * a);
+        x2 = (-b - discriminant**0.5) / (2 * a);
     } else if (discriminant === 0) { // квадратное уравнение имеет два одинаковых корня
         x1 = -b / (2 * a);
         x2 = x1;
