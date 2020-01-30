@@ -9,9 +9,7 @@ uniq(array); // -> [1,2,0]
 uniq(array2); // -> [1,2,3]
 uniq(array3); // -> [1]
 
-function unique(arr) {
-  return arr.filter((e, i) => arr.indexOf(e) === i);
-}
+const unique = (arr) => arr.filter((el, i) => arr.indexOf(el) === i);
 
 unique(array); // -> [1,2,0]
 unique(array2); // -> [1,2,3]
