@@ -18,9 +18,7 @@ unique(array2); // -> [1,2,3]
 unique(array3); // -> [1]
 
 // Инкапсуляция условия
-function isUnique(arr, i) {
-    return arr.indexOf(arr[i]) === i;
-}
+const isUnique = (arr, i) => arr.indexOf(arr[i]) === i;
 
 function getUnique(arr) {
     let result = [];
