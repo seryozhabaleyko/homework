@@ -14,7 +14,7 @@ uniq(array3); // -> [1]
  * Если возвращаемый индекс больше текущего индекса, тогда добавляем этот элемент в новый массив и возвращаем его.
 */
 function unique(arr) {
-  return arr.filter((e, i) => arr.indexOf(e) >= i);
+  return arr.filter((e, i) => arr.indexOf(e) === i);
 }
 
 unique(array); // -> [1,2,0]
