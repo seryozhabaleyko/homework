@@ -30,11 +30,8 @@ function getUnique(arr) {
     let result = [];
       
     for (let i = 0; i < arr.length; i++) { // for and Array.forEach() and Array.filter()
-          
         if (isUnique(arr, i)) {
-              
             result.push(arr[i]);
-              
         }        
     }
 
