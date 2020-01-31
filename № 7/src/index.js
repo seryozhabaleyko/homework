@@ -1,24 +1,19 @@
 const isObject = (obj) => obj && typeof obj === 'object';
-const isArray = (obj) => Array.isArray(obj);
 
 function deepEquals(a, b) {
     
     if (a === b) {
         return true;
-    }
-
-    let result = isObject(a) && isObject(b) && Object.keys(a).length === Object.keys(b).length;
-
-    if (result) {
+    } else if (isObject(a) && isObject(b) && Object.keys(a).length === Object.keys(b).length) {
         for (const key in a) {
             if (!deepEquals(a[key], b[key])) {
-                result = false;
-                break;
+                return false;
             }
         }
+        return true;
     } 
 
-    return result;
+    return false;
 }
 
 
