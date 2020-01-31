@@ -1,4 +1,4 @@
-const isObject = (obj) => obj && obj.constructor === Object;
+const isObject = (obj) => obj && typeof obj === 'object';
 const isArray = (obj) => Array.isArray(obj);
 
 function deepEquals(a, b) {
@@ -16,6 +16,7 @@ function deepEquals(a, b) {
 
     return result;
 }
+
 
 function isObjEquals(a, b) {
     let result = isObject(a) && isObject(b);
@@ -41,7 +42,7 @@ function isArrayEquals(a, b) {
     if (result) {
         result = a.length === b.length;
         if (result) {
-            for (const i = 0; i < a.length; i++) {
+            for (let i = 0; i < a.length; i++) {
                 if (!deepEquals(a[i], b[i])) {
                     result = false;
                     break;
