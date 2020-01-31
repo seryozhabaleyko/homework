@@ -55,8 +55,15 @@ function isArrayEquals(a, b) {
 }
 
 
-let a = { value: { a: 13 }, b: 'abc' };
-let b = { value: { a: 13 }, b: 'abc' };
+const a = {
+    value: { a: 13 },
+    b: 'abc',
+};
+
+const b = {
+    value: { a: 13 },
+    b: 'abc',
+};
 
 const deepEqualsOrderMatters = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 
