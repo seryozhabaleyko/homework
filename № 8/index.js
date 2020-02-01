@@ -48,7 +48,7 @@ const calculator = (() => {
 calculator.addition(2);
 calculator.addition(4);
 console.log(calculator.result()); // result 6
-calculator.subtraction(2)
+calculator.subtraction(2);
 console.log(calculator.result()); // result 4
-calculator.clear()
+calculator.clear();
 console.log(calculator.result()); // result 0
