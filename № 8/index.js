@@ -1,47 +1,45 @@
 const calculator = (() => {
-    let data = {
-        number: 0,
-    };
+    let number = 0;
 
     return {
         addition(n) {
-            data.number += n;
+            number += n;
         },
         subtraction(n) {
-            data.number -= n;
+            number -= n;
         },
         multiplication(n) {
-            data.number *= n;
+            number *= n;
         },
         division(n) {
-            data.number /= n;
+            number /= n;
         },
         module(n) {
-            data.number %= n;
+            number %= n;
         },
         sqrt(n) {
-            data.number = Math.sqrt(n);
+            number = Math.sqrt(n);
         },
         tan(n) {
-            data.number = Math.tan(n);
+            number = Math.tan(n);
         },
         sin(n) {
-            data.number = Math.sin(n);
+            number = Math.sin(n);
         },
         cos(n) {
-            data.number = Math.cos(n);
+            number = Math.cos(n);
         },
         cbrt(n) {
-            data.number = Math.cbrt(n);
+            number = Math.cbrt(n);
         },
         pow(x, y) {
-            data.number = Math.pow(x, y);
-        },
-        result() {
-            return data.number;
+            number = Math.pow(x, y);
         },
         clear() {
-            data.number = 0;
+            number = 0;
+        },
+        result() {
+            return number;
         },
     };
 })();
