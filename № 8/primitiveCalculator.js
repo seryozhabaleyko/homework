@@ -1,17 +1,18 @@
 const calculator = (() => {
+    
     let number = 0;
 
     return {
-        addition(n) {
+        add(n) {
             number += n;
         },
-        subtraction(n) {
+        sub(n) {
             number -= n;
         },
-        multiplication(n) {
+        mult(n) {
             number *= n;
         },
-        division(n) {
+        div(n) {
             number /= n;
         },
         module(n) {
@@ -45,10 +46,10 @@ const calculator = (() => {
 })();
 
 
-calculator.addition(2);
-calculator.addition(4);
+calculator.add(2);
+calculator.add(4);
 console.log(calculator.result()); // result 6
-calculator.subtraction(2);
+calculator.sub(2);
 console.log(calculator.result()); // result 4
 calculator.clear();
 console.log(calculator.result()); // result 0
