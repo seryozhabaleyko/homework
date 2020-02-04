@@ -1,6 +1,6 @@
-const mybind = (fn, context, ...args) => (...rest) => fn.apply(context, [...args, ...rest]);
+const mybind = (func, context, ...args) => (...rest) => func.apply(context, [...args, ...rest]);
 
-const mybindd = (fn, context, ...args) => (...rest) => fn.call(context, ...args, ...rest);
+const mybindd = (func, context, ...args) => (...rest) => func.call(context, ...args, ...rest);
 
 const mul = (a, b) => a * b;
 
