@@ -1,11 +1,7 @@
 const mybind = (func, context, ...args) => (...rest) => func.apply(context, [...args, ...rest]);
 
-const mybindd = (func, context, ...args) => (...rest) => func.call(context, ...args, ...rest);
+const sum = (a, b) => a + b;
 
-const mul = (a, b) => a * b;
+const foo = mybind(sum, null, 3, 3);
 
-const foo = mybind(mul, null, 3, 2);
-const bar = mybindd(mul, null, 3);
-
-console.log(foo());
-console.log(bar(2));
+foo(2,3,4,22,2); // 6
