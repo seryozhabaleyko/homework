@@ -16,7 +16,7 @@ Programmer.prototype.add = function (name, position, description) {
 Programmer.prototype.task = function (name, task) {
     this._hash.forEach(item => {
         if (item.name === name) item.task = task;
-    })
+    });
 };
 
 Programmer.prototype.get = function () {
