@@ -34,8 +34,6 @@ class Drinks extends HashStorage {
     }
 }
 
-const drink = new Drinks();
-
 class Fruit extends HashStorage {
     constructor() {
         super();
@@ -55,5 +53,3 @@ class Fruit extends HashStorage {
         return this._box;
     }
 }
-
-const fruit = new Fruit();

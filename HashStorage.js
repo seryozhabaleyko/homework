@@ -18,8 +18,6 @@ function HashStorage() {
     };
 }
 
-const drinkStorage = new HashStorage();
-
 function Drinkables() {
     HashStorage.call(this);
 
@@ -33,8 +31,6 @@ function Drinkables() {
         return this._hash[key] ? 'да' : 'нет';   
     };
 }
-
-const drink = new Drinkables();
 
 function Fruit() {
     HashStorage.call(this);
@@ -56,5 +52,3 @@ function Fruit() {
         return box;
     };
 }
-
-const fruit = new Fruit();

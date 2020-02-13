@@ -37,8 +37,6 @@ Drinks.prototype.has = function (key) {
     return this._hash[key] ? 'да' : 'нет';
 };
 
-const drink = new Drinks();
-
 _inherits(Fruit, HashStorage);
 
 function Fruit() {
@@ -58,7 +56,3 @@ Fruit.prototype.number = function () {
 Fruit.prototype.getFruitBox = function () {
     return this.box;
 };
-
-const fruit = new Fruit();
-
-
