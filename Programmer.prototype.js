@@ -29,8 +29,6 @@ Programmer.prototype.delete = function (name) {
     });
 };
 
-const programmer = new Programmer();
-
 _inherits(Frontend, Programmer);
 
 // frontend - подкласс
@@ -42,8 +40,6 @@ Frontend.prototype.add = function (name, description) {
     Programmer.prototype.add.call(this, name, 'frontend', description);
 };
 
-const frontend = new Frontend();
-
 _inherits(Backend, Programmer);
 
 // backend - подкласс
@@ -54,5 +50,3 @@ function Backend() {
 Backend.prototype.add = function (name, description) {
     Programmer.prototype.add.call(this, name, 'backend', description);
 };
-
-const backend = new Backend();
