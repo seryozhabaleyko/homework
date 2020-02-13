@@ -25,25 +25,17 @@ class Programmer {
 }
 
 class Frontend extends Programmer {
-    constructor() {
-        super();
-    }
-
+    
     add(name, description) {
         super.add(name, 'frontend', description);
     }
+    
 }
 
-const frontend = new Frontend();
-
 class Backend extends Programmer {
-    constructor() {
-        super();
-    }
-
+    
     add(name, description) {
         super.add(name, 'backend', description);
     }
+    
 }
-
-const backend = new Backend();
