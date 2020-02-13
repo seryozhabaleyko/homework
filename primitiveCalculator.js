@@ -9,7 +9,7 @@ const calculator = (() => {
         sub(n) {
             number -= n;
         },
-        mult(n) {
+        multi(n) {
             number *= n;
         },
         div(n) {
