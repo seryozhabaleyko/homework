@@ -1,2 +1,2 @@
-# homework #printForm#
-https://seryozhabaleyko.github.io/homework/printForm/
+# homework
+- [printForm](https://seryozhabaleyko.github.io/homework/printForm/)
