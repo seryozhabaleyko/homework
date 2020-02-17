@@ -64,8 +64,7 @@ function printForm(form, array) {
                 label = document.createElement('label');
                 labelText = document.createTextNode(val.text);
 
-                label.appendChild(input);
-                group.appendChild(label).appendChild(labelText);
+                group.appendChild(label).append(input, labelText);
             });
         } else if (item.kind === 'combo') {
             const select = document.createElement('select');
@@ -78,21 +77,18 @@ function printForm(form, array) {
                 select.appendChild(option).appendChild(document.createTextNode(item.text));
             });
 
-            group.appendChild(label);
-            group.appendChild(select);
+            group.append(label, select);
         } else if (item.kind === 'memo') {
             const textarea = document.createElement('textarea');
             textarea.name = item.name;
-
+            
             group.classList.add('form-textarea');
-            group.appendChild(label);
-            group.appendChild(textarea);
+            group.append(label, textarea);
         } else if (item.kind === 'submit') {
             input.value = item.label;
             group.appendChild(input);
         } else {
-            group.appendChild(label);
-            group.appendChild(input);
+            group.append(label, input);
         }
 
         form.appendChild(group);
