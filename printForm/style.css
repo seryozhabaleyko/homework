@@ -1,0 +1,36 @@
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: hsl(0, 0%, 98%);
+}
+
+
+form {
+	margin: 0 auto;
+	width: 50%;
+	margin: 40px 0 40px 0;
+	padding: 30px;
+	border-radius: 4px;
+	background: hsl(0, 0%, 100%);
+	box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+}
+
+.form-group {
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	padding: 10px 0;
+}
+
+.form-radio {
+	grid-template-columns: 200px auto auto auto 1fr;
+}
+
+.form-textarea {
+	grid-template-columns: 1fr;
+}
+
+input[type="number"] {
+	width: 50%;
+}
