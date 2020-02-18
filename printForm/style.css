@@ -3,33 +3,40 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: hsl(0, 0%, 98%);
+	background-color: #fcfcfc;
+	font-family: 'Roboto', sans-serif;
 }
 
 
 form {
-	margin: 0 auto;
 	width: 50%;
-	margin: 40px 0 40px 0;
+	margin: 40px auto 40px auto;
 	padding: 30px;
 	border-radius: 4px;
-	background: hsl(0, 0%, 100%);
+	background: #fff;
 	box-shadow: hsl(0, 0%, 80%) 0 0 16px;
 }
 
 .form-group {
+	position: relative;
 	display: grid;
 	grid-template-columns: 200px 1fr;
 	padding: 10px 0;
+	align-items: center;
 }
 
 .form-radio {
+	height: 49px;
 	grid-template-columns: 200px auto auto auto 1fr;
 }
 
 .form-textarea {
 	grid-template-columns: 1fr;
 }
+
+
+
+
 
 input[type="number"] {
 	width: 50%;
