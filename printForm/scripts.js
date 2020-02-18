@@ -1,11 +1,12 @@
 const fromArray1 = [
-    { label: 'Название сайта:', kind: 'longtext', name: 'sitename' },
-    { label: 'URL сайта:', kind: 'longtext', name: 'siteurl' },
+    { label: 'Название сайта:', kind: 'text', name: 'sitename' },
+    { label: 'URL сайта:', kind: 'url', name: 'siteurl' },
     { label: 'Посетителей в сутки:', kind: 'number', name: 'visitors' },
-    { label: 'E-mail для связи:', kind: 'shorttext', name: 'email' },
+    { label: 'E-mail для связи:', kind: 'email', name: 'email' },
     {
         label: 'Рубрика каталога:', kind: 'combo', name: 'division',
         variants: [
+            { text: 'выбрать', value: '' },
             { text: 'здоровье', value: 1 },
             { text: 'домашний уют', value: 2 },
             { text: 'бытовая техника', value: 3 }
@@ -25,9 +26,9 @@ const fromArray1 = [
 ];
 
 const fromArray2 = [
-    { label: 'Фамилия:', kind: 'longtext', name: 'lastname' },
-    { label: 'Имя:', kind: 'longtext', name: 'firstname' },
-    { label: 'Отчество:', kind: 'longtext', name: 'secondname' },
+    { label: 'Фамилия:', kind: 'text', name: 'lastname' },
+    { label: 'Имя:', kind: 'text', name: 'firstname' },
+    { label: 'Отчество:', kind: 'text', name: 'secondname' },
     { label: 'Возраст:', kind: 'number', name: 'age' },
     { label: 'Зарегистрироваться:', kind: 'submit' },
 ];
@@ -60,6 +61,7 @@ function printForm(form, array) {
                 input.type = item.kind;
                 input.name = item.name;
                 input.value = val.value;
+                input.setAttribute('required', '');
 
                 label = document.createElement('label');
                 labelText = document.createTextNode(val.text);
