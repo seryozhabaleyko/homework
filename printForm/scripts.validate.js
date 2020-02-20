@@ -77,23 +77,18 @@ const $fields = document.querySelectorAll('.field');
 form1.addEventListener('submit', checkAllInputValues);
 
 function checkAllInputValues(e) {
-    removeError();
     const fields = [...$fields].filter(field => !field.value);
     fields.forEach(field => {
-        const error = generateError('error');
-        field.parentElement.appendChild(error);
+        const parentField = field.parentElement;
+        if (!parentField.querySelector('.wrong')) {
+            const error = generateError('error');
+            parentField.appendChild(error);
+        }
     });
     if (fields[0]) {
         e.preventDefault();
         fields[0].focus();
     }
-}
-
-function removeError() {
-    const $allWrong = form1.querySelectorAll('.wrong');
-    $allWrong.forEach(item => {
-        item.remove();
-    });
 }
 
 function generateError(message) {
