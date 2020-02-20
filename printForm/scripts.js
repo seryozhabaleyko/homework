@@ -35,8 +35,8 @@ printForm(form1, fromArray);
 
 function createLabel(text) {
     const $label = document.createElement('label');
-    const $labelText = document.createTextNode(text);
-    $label.appendChild($labelText);
+    const labelText = document.createTextNode(text);
+    $label.appendChild(labelText);
     return $label;
 }
 
