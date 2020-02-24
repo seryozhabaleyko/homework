@@ -6,24 +6,24 @@ function dragAndDrop() {
         setTimeout(() => {
             this.classList.add('hide');
         }, 0);
-    }
+    };
 
     const dragEnd = function() {
         this.classList.remove('hide');
-    }
+    };
 
     const dragOver = function(evt) {
         evt.preventDefault();
-    }
+    };
 
     const dragEnter = function(evt) {
         evt.preventDefault();
         this.classList.add('hovered');
-    }
+    };
 
     const dragLeave = function() {
         this.classList.remove('hovered');
-    }
+    };
 
     let dragDrop = null;
 
