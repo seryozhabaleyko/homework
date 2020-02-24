@@ -4,10 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles.css">
 </head>
 <body>
+
+    <header id="header"></header>
     
-    
+    <div id="board">
+        <div class="js-list list-wrapper">
+            <div class="list js-list-content">
+                <div class="list-header"><span style="padding: 4px 8px;">Нужно сделать</span></div>
+                <div class="list-cards js-list-cards">
+                    <div class="list-card js-droppable" draggable="true">
+                        <div class="list-card-details js-card-details">
+                            К примеру, модальное окно можно «взять», только захватив его за заголовок.
+                        </div>
+                    </div>
+                    <div class="list-card js-droppable" draggable="true">
+                        <div class="list-card-details js-card-details">
+                            Бывает и так, что не на любое место в droppable можно положить элемент.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="js-list list-wrapper">
+            <div class="list js-list-content">
+                <div class="list-header"><span style="padding: 4px 8px;">В процессе</span></div>
+                <div class="list-cards js-list-cards">
+                    1
+                </div>
+            </div>
+        </div>
+        <div class="js-list list-wrapper">
+            <div class="list js-list-content">
+                <div class="list-header"><span style="padding: 4px 8px;">Готово</span></div>
+                <div class="list-cards js-list-cards">
+                    1
+                </div>
+            </div>
+        </div>
+        <div class="js-list list-wrapper">
+            <div class="list js-list-content">
+                <div class="list-header"><span style="padding: 4px 8px;">Облажался</span></div>
+                <div class="list-cards js-list-cards">
+                    1
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./src/app.js" type="module"></script>
 </body>
