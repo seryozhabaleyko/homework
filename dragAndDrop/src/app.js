@@ -13,6 +13,7 @@ import dragAndDrop from './board.js';
         document.body.append(this);
 
         const moveAt = (pageX, pageY) => {
+            this.style.cursor = 'grabbing';
             this.style.left = pageX - shiftX + 'px';
             this.style.top = pageY - shiftY + 'px';
         };
@@ -28,6 +29,7 @@ import dragAndDrop from './board.js';
         this.onmouseup = function () {
             document.removeEventListener('mousemove', onMouseMove);
             this.onmouseup = null;
+            this.style.cursor = 'grab';
         };
     }
 
