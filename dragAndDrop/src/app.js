@@ -37,4 +37,4 @@ import dragAndDrop from './board.js';
     });
 })();
 
-//dragAndDrop();
+dragAndDrop();
