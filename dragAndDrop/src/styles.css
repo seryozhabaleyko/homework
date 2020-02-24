@@ -1,3 +1,99 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
-  overflow: hidden;  
+	overflow: hidden;
+	color: #000000de;
+	font-family: 'Roboto', sans-serif;
+}
+
+#header {
+    background: #4285f4;
+    height: 200px;
+}
+
+#board {
+	margin: -50px auto 0 auto;
+	display: flex;
+	justify-content: center;
+}
+
+.list-wrapper {
+    width: 272px;
+    margin: 0 4px;
+    height: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.list {
+	background: #fafafa;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    position: relative;
+    white-space: normal;
+}
+
+.list-header {
+    flex: 0 0 auto;
+    padding: 10px 8px;
+    position: relative;
+    min-height: 20px;
+}
+
+.list-cards {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0 4px;
+    padding: 0 4px;
+    z-index: 1;
+    min-height: 0;
+}
+
+.list-card {
+    background-color: #009688;
+    border-radius: 3px;
+	box-shadow: 0 1px 0 rgba(9,30,66,.25);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+    display: block;
+    margin-bottom: 8px;
+    max-width: 300px;
+    min-height: 20px;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+}
+
+.list-card-details {
+    overflow: hidden;
+    padding: 6px 8px 2px;
+    position: relative;
+    z-index: 10;
+}
+
+.list-card-details {
+	color: #fafafa;
+	font-size: 14px;
+}
+
+.hide {
+    display: none;
+}
+
+.hovered {
+	min-height: 20px;
+	background-color: #d1d8e2;
+	border-radius: 2px;
 }
