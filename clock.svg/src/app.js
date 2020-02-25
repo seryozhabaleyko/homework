@@ -102,7 +102,7 @@ function createDate() {
     $date.setAttribute('y', CLOCK_CY - CLOCK_RADIUS / 2.75);
     $date.setAttribute('text-anchor', 'middle');
     $date.setAttribute('font-size', CLOCK_RADIUS / 5);
-    $date.id = 'date'
+    $date.id = 'date';
     return $date;
 }
 
