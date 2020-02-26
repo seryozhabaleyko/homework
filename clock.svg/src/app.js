@@ -122,8 +122,8 @@ function startWatch() {
     const $second = document.getElementById('second');
     $date.textContent = date.toLocaleTimeString();
     $hour.setAttribute('transform', `rotate(${angleHour} ${CLOCK_CX} ${CLOCK_CY})`);
-    $minute.setAttribute('transform', `rotate(${angleMinute} ${CLOCK_CX} ${CLOCK_CY})`)
-    $second.setAttribute('transform', `rotate(${angleSecond} ${CLOCK_CX} ${CLOCK_CY})`)
+    $minute.setAttribute('transform', `rotate(${angleMinute} ${CLOCK_CX} ${CLOCK_CY})`);
+    $second.setAttribute('transform', `rotate(${angleSecond} ${CLOCK_CX} ${CLOCK_CY})`);
 }
 
 function watch() {
