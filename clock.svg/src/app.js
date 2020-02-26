@@ -87,7 +87,7 @@ function createMinuteHand() {
 function createSecondHand() {
     const $secondHand = document.createElementNS('http://www.w3.org/2000/svg', 'line');
     $secondHand.setAttribute('stroke', 'green');
-    $secondHand.setAttribute('stroke-width', CLOCK_RADIUS / 80);
+    $secondHand.setAttribute('stroke-width', '3');
     $secondHand.setAttribute('x1', CLOCK_CX);
     $secondHand.setAttribute('y1', CLOCK_CY * 1.05);
     $secondHand.setAttribute('x2', CLOCK_CX);
