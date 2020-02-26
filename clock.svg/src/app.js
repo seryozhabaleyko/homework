@@ -116,11 +116,13 @@ function startWatch() {
     const angleMinute = minute / 60 * 360;
     const angleSecond = second / 60 * 360;
     
-    const $date = document.getElementById('date');
+    document
+        .getElementById('date')
+        .textContent = date.toLocaleTimeString();
+        
     const $hour = document.getElementById('hour');
     const $minute = document.getElementById('minute');
     const $second = document.getElementById('second');
-    $date.textContent = date.toLocaleTimeString();
     $hour.setAttribute('transform', `rotate(${angleHour} ${CLOCK_CX} ${CLOCK_CY})`);
     $minute.setAttribute('transform', `rotate(${angleMinute} ${CLOCK_CX} ${CLOCK_CY})`);
     $second.setAttribute('transform', `rotate(${angleSecond} ${CLOCK_CX} ${CLOCK_CY})`);
@@ -142,10 +144,16 @@ function watch() {
         const number = createNodeForNumber(i);
         const text = createNodeForText(i);
 
-        svg.appendChild(group).append(number, text);
+        svg
+            .appendChild(group)
+            .append(number, text);
     }
 
-    document.body.appendChild(wrapper).appendChild(svg).append(hourHand, minuteHand, secondHand, date);
+    document
+        .body
+        .appendChild(wrapper)
+        .appendChild(svg)
+        .append(hourHand, minuteHand, secondHand, date);
 
     startWatch();
 
