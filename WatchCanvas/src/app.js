@@ -7,8 +7,8 @@ const WATCH_CY = WATCH_HEIGHT / 2;
 const WATCH_RADIUS = (WATCH_WIDTH / 2) - 1;
 
 function drawCircle(ctx, x, y, radius, color) {
-  ctx.fillStyle = color;
   ctx.beginPath();
+  ctx.fillStyle = color;
   ctx.arc(x, y, radius, 0, 2 * Math.PI, false);
   ctx.fill();
   ctx.stroke();
@@ -27,11 +27,9 @@ function drawLine(ctx, xfrom, yfrom, xto, yto, width, color) {
   ctx.beginPath();
   ctx.moveTo(xfrom, yfrom);
   ctx.lineTo(xto, yto);
-  ctx.closePath();
   ctx.strokeStyle = color;
   ctx.lineWidth = width;
   ctx.stroke();
-
 }
 
 function xyfrom(index) {
