@@ -50,12 +50,12 @@ function yto(n, i, y, radius) {
 }
 
 function date() {
-  const date = new Date();
+  const today = new Date();
 
   return {
-    hour: date.getHours(),
-    minute: date.getMinutes(),
-    second: date.getSeconds(),
+    hour: today.getHours(),
+    minute: today.getMinutes(),
+    second: today.getSeconds(),
   };
 }
 
