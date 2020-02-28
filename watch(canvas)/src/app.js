@@ -49,13 +49,13 @@ function yto(n, i, y, radius) {
   return y - radius * Math.cos(2 * Math.PI * n / i);
 }
 
-function date() {
-  const today = new Date();
+function getDate() {
+  const date = new Date();
 
   return {
-    hour: today.getHours(),
-    minute: today.getMinutes(),
-    second: today.getSeconds(),
+    hour: date.getHours(),
+    minute: date.getMinutes(),
+    second: date.getSeconds(),
   };
 }
 
@@ -71,12 +71,13 @@ function watch() {
 
   const ctx = $canvas.getContext('2d');
 
-  const {hour, minute, second} = date();
+  const {hour, minute, second} = getDate();
 
   drawCircle(ctx, WATCH_CX, WATCH_CY, WATCH_RADIUS, 'gold');
 
   for (let i = 1; i < 13; i++) {
     const [x, y] = xyfrom(i);
+
     drawCircle(ctx, x, y, 30, '#4caf50');
     drawText(ctx, x, y, i, 'black');
   }
