@@ -3,12 +3,13 @@ import dragAndDrop from './board.js';
 (function () {
     const $balls = document.querySelectorAll('.ball');
 
-    function onMouseDown(e) {   
-        const shiftX = e.clientX - this.getBoundingClientRect().left;
-        const shiftY = e.clientY - this.getBoundingClientRect().top;
+    function onMouseDown(e) {
+        const {left, top} = this.getBoundingClientRect();
+        const shiftX = e.clientX - left;
+        const shiftY = e.clientY - top;
 
         this.style.position = 'absolute';
-        this.style.zIndex = 1000;
+        this.style.zIndex = 999;
 
         document.body.append(this);
 
