@@ -7,18 +7,8 @@ import Controller from './ClockControllerButtons.js';
 
 function Watch() {
   const view = new View();
-  const controller = new Controller();
-  const model = new Model(view, controller);
+  const model = new Model(view);
+  const controller = new Controller(view, model);
 }
 
 Watch();
-Watch();
-
-function clock() {
-  const view = new ViewSVG();
-  const controller = new Controller();
-  const model = new Model(view, controller);
-}
-
-clock();
-clock();
