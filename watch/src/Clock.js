@@ -9,6 +9,16 @@ class Model {
         this.view = view;
     }
 
+    startTimer() {
+        this.timerId = setInterval(this.init.bind(this), 1000);
+        this.init();
+    }
+
+    stopTimer() {
+        clearInterval(this.timerId);
+        this.timerId = null;
+    }
+
     init() {
         this.view.clearRect(0, 0, WATCH_WIDTH, WATCH_HEIGHT);
 
