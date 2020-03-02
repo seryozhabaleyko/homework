@@ -10,6 +10,7 @@ import dragAndDrop from './board.js';
 
         this.style.position = 'absolute';
         this.style.zIndex = 999;
+        
 
         document.body.append(this);
 
