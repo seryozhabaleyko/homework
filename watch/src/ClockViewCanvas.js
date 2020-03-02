@@ -1,14 +1,14 @@
 import { WATCH_WIDTH, WATCH_HEIGHT } from './Clock.js';
  
 class View {
-    constructor() {
-        this.app = document.getElementById('root');
+    constructor(selector) {
+        this.selector = selector;
         this.wrapper = document.createElement('div');
-        this.canvas = document.createElement('canvas');
-        this.canvas.width = WATCH_WIDTH;
-        this.canvas.height = WATCH_HEIGHT;
-        this.app.appendChild(this.wrapper).appendChild(this.canvas);
-        this.ctx = this.canvas.getContext('2d');
+        const canvas = document.createElement('canvas');
+        canvas.width = WATCH_WIDTH;
+        canvas.height = WATCH_HEIGHT;
+        this.selector.appendChild(this.wrapper).appendChild(canvas);
+        this.ctx = canvas.getContext('2d');
     }
 
     createButton(name = 'button', onClick) {
