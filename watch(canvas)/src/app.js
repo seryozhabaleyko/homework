@@ -11,8 +11,8 @@ function drawCircle(ctx, x, y, radius, color) {
   ctx.fillStyle = color;
   ctx.arc(x, y, radius, 0, 2 * Math.PI, false);
   ctx.fill();
+  ctx.closePath();
   ctx.stroke();
-  ctx.strokeStyle = '#333';
 }
 
 function drawText(ctx, x, y, text, color) {
@@ -29,16 +29,16 @@ function drawLine(ctx, xfrom, yfrom, xto, yto, width, color) {
   ctx.lineTo(xto, yto);
   ctx.strokeStyle = color;
   ctx.lineWidth = width;
+  ctx.closePath();
   ctx.stroke();
 }
 
-function xyfrom(index) {
-  const angle = (index * 30) * Math.PI  / 180;
+function xfrom(index) {
+  return WATCH_CX + (WATCH_RADIUS - WATCH_WIDTH / 10) * Math.sin((index * 30) * Math.PI / 180);
+}
 
-  return [
-    WATCH_CX + (WATCH_RADIUS - WATCH_WIDTH / 10) * Math.sin(angle),
-    WATCH_CY - (WATCH_RADIUS - WATCH_HEIGHT / 10) * Math.cos(angle),
-  ];
+function yfrom(index) {
+  return WATCH_CY - (WATCH_RADIUS - WATCH_HEIGHT / 10) * Math.cos((index * 30) * Math.PI / 180);
 }
 
 function xto(n, i, x, radius) {
@@ -59,9 +59,8 @@ function getDate() {
   };
 }
 
-function ft(time) {
-    if (time < 10) time = `0${time}`;
-    return time;
+function formaTime(time) {
+  return time < 10 ? time = `0${time}` : time;
 }
 
 function watch() {
@@ -76,10 +75,8 @@ function watch() {
   drawCircle(ctx, WATCH_CX, WATCH_CY, WATCH_RADIUS, 'gold');
 
   for (let i = 1; i < 13; i++) {
-    const [x, y] = xyfrom(i);
-
-    drawCircle(ctx, x, y, 30, '#4caf50');
-    drawText(ctx, x, y, i, 'black');
+    drawCircle(ctx, xfrom(i), yfrom(i), 30, '#4caf50');
+    drawText(ctx, xfrom(i), yfrom(i), i, 'black');
   }
 
   drawLine(
@@ -92,7 +89,7 @@ function watch() {
     '#333'
   );
 
-  drawCircle(ctx, WATCH_CX, WATCH_CY, 7, '#333');
+  drawCircle(ctx, WATCH_CX, WATCH_CY, 8, '#333');
 
   drawLine(
     ctx,
@@ -122,7 +119,7 @@ function watch() {
     ctx,
     WATCH_CX,
     WATCH_CY - WATCH_HEIGHT / 5,
-    `${hour}:${ft(minute)}:${ft(second)}`,
+    `${hour}:${formaTime(minute)}:${formaTime(second)}`,
     'black',
   );
 
