@@ -5,21 +5,8 @@ const WATCH_CY = WATCH_HEIGHT / 2;
 const WATCH_RADIUS = (WATCH_WIDTH / 2) - 1;
 
 class Model {
-    constructor(view, controller) {
+    constructor(view) {
         this.view = view;
-        this.controller = controller;
-        
-        this.controller.clockStart(this.init.bind(this));
-        
-        this.view.createButton('start', () => {
-            this.controller.clockStop();
-            this.controller.clockStart(this.init.bind(this));
-            this.init();
-        });
-
-        this.view.createButton('stop', () => {
-            this.controller.clockStop();
-        });
     }
 
     init() {
