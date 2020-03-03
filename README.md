@@ -4,4 +4,4 @@
 - [watch(svg)](https://seryozhabaleyko.github.io/homework/watch(svg)/)
 - [watch(canvas)](https://seryozhabaleyko.github.io/homework/watch(canvas)/)
 - [project](https://seryozhabaleyko.github.io/homework/thesis-project.html)
-- [MVC](https://seryozhabaleyko.github.io/homework/watch/)
+- [ClockModelViewController](https://seryozhabaleyko.github.io/homework/ClockModelViewController/)
