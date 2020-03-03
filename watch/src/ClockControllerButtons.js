@@ -1,29 +1,27 @@
+'use strict';
+
 class Controller {
-    constructor(view, model) {
+
+    constructor(model, view) {
         this.model = model;
         this.view = view;
 
-        this.clockStart();
+        this.view.setChangeHandler(
+            checked => {
+                if (checked) {
+                    this.registerModelHandler();
+                } else {
+                    this.model.setChangeListener(() => null);
+                }
+            }
+        );
 
-        this.view.createButton('start', () => {
-            this.clockStop();
-            this.clockStart();
-            this.model.init();
-        });
-
-        this.view.createButton('stop', () => {
-            this.clockStop();
-        });
+        this.registerModelHandler();
     }
 
-    clockStart() {
-        this.timerId = setInterval(this.model.init.bind(this.model), 1000);
-        this.model.init();
-    }
-
-    clockStop() {        
-        clearInterval(this.timerId);
-        this.timerId = null;
+    registerModelHandler() {
+        this.model.setChangeListener(() => this.view.render(this.model));
+        this.view.render(this.model);
     }
 }
 
