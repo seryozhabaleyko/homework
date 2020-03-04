@@ -23,6 +23,21 @@ watch({
   selector: document.getElementById('root'),
   timezone: {
     number: -1,
-    string: 'Берлин (GMT-5)'
+    string: 'Берлин (GMT-1)'
+  }
+});
+
+
+function clock({ selector, timezone: tz }) {
+  const view = new ViewSVG(selector, tz.string);
+  const model = new Model(tz.number);
+  const controller = new Controller(model, view);
+}
+
+clock({
+  selector: document.getElementById('root'),
+  timezone: {
+    number: -10,
+    string: 'Нью-Йорк (GMT-5)'
   }
 });
