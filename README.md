@@ -5,3 +5,4 @@
 - [watch(canvas)](https://seryozhabaleyko.github.io/homework/watch(canvas)/)
 - [project](https://seryozhabaleyko.github.io/homework/thesis-project.html)
 - [ClockModelViewController](https://seryozhabaleyko.github.io/homework/ClockModelViewController/)
+- [Tennis](https://seryozhabaleyko.github.io/homework/Tennis/)
