@@ -1,7 +1,21 @@
+function isEqual(a, b) {
+    var aProps = Object.getOwnPropertyNames(a);
+    var bProps = Object.getOwnPropertyNames(b);
+    if (aProps.length != bProps.length) {
+        return false;
+    }
+    for (var i = 0; i < aProps.length; i++) {
+        var propName = aProps[i];
+        if (a[propName] !== b[propName]) {
+            return false;
+        }
+    }
+    return true;
+}
+
 const isObject = (obj) => obj && typeof obj === 'object';
 
 function deepEquals(a, b) {
-    
     if (a === b) {
         return true;
     } else if (isObject(a) && isObject(b) && Object.keys(a).length === Object.keys(b).length) {
@@ -12,7 +26,6 @@ function deepEquals(a, b) {
         }
         return true;
     } 
-
     return false;
 }
 
