@@ -18,19 +18,19 @@ class Form {
         });
     }
 
-    generateElement(label, kind, name, variants) {
+    generateElement(label, type, name, variants) {
         const field = document.createElement('div');
         field.classList.add('input-field');
 
-        switch (kind) {
+        switch (type) {
             case 'longtext':
-                field.appendChild(this.createInput(kind, label, name));
+                field.appendChild(this.createInput(type, label, name));
                 break;
             case 'shorttext':
-                field.appendChild(this.createInput(kind, label, name));
+                field.appendChild(this.createInput(type, label, name));
                 break;
             case 'number':
-                field.appendChild(this.createInput(kind, label, name));
+                field.appendChild(this.createInput(type, label, name));
                 break;
             case 'combo':
                 field.appendChild(this.createSelect(label, name, variants));
