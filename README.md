@@ -6,3 +6,4 @@
 - [project](https://seryozhabaleyko.github.io/homework/thesis-project.html)
 - [ClockModelViewController](https://seryozhabaleyko.github.io/homework/ClockModelViewController/)
 - [Tennis](https://seryozhabaleyko.github.io/homework/Tennis/)
+- [DYN_FORM_AJAX](https://seryozhabaleyko.github.io/homework/DYN_FORM_AJAX/)
