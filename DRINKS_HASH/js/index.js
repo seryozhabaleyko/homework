@@ -4,7 +4,7 @@ import HashStorage from './HashStorage.Class.js';
 
 const drinkStorage = new HashStorage();
 
-; (function () {
+;(function () {
     function enterDrinkInformationHandler() {
         const key = prompt('Введите название напитка', '');
 
@@ -72,4 +72,9 @@ const drinkStorage = new HashStorage();
     document
         .getElementById('root')
         .append(infoWindow, buttonWrapper);
+<<<<<<< HEAD
 })();
+=======
+
+})();
+>>>>>>> 99b7652e60b3cb85859e537b881a57d2f57286a9
