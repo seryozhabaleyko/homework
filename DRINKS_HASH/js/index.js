@@ -4,7 +4,7 @@ import HashStorage from './HashStorage.Class.js';
 
 const drinkStorage = new HashStorage();
 
-; (function () {
+;(function () {
     function enterDrinkInformationHandler() {
         const key = prompt('Введите название напитка', '');
 
