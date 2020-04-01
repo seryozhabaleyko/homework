@@ -72,5 +72,4 @@ const drinkStorage = new HashStorage();
     document
         .getElementById('root')
         .append(infoWindow, buttonWrapper);
-
 })();
