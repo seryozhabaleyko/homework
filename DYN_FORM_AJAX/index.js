@@ -6,8 +6,8 @@ const url = 'https://fe.it-academy.by/AjaxStringStorage2.php';
 
 const getServerInformation = (name) => {
 	const options = {
-		type: 'POST',
 		url,
+		type: 'POST',
 		cache: false,
 		dataType: 'json',
 		async: false,
